@@ -52,7 +52,11 @@ function addItem(){
  }
  
 }
-function updateItem(){
+function updateItem(item) {
+const newValue = prompt("Update Todo",item.value);
+if(newValue){
+    socket.emit('updateItem',{id:item.id,value:newValue})
+}
 
 }
 
