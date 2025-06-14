@@ -29,7 +29,7 @@ NameSpace.on("connection",(socket)=>{
   });
 
   socket.on('updateItem',(itemObj)=>{
-    const index = todoList.findIndex((item)=>item.id===itemObj);
+    const index = todoList.findIndex((item)=>item.id===itemObj.id);
     if(index!==1){
         todoList[index].value=itemObj.value;
          NameSpace.emit("update", todoList);

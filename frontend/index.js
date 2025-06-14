@@ -55,7 +55,7 @@ function addItem(){
 function updateItem(item) {
 const newValue = prompt("Update Todo",item.value);
 if(newValue){
-    socket.emit('updateItem',{id:item.id,value:newValue})
+    socket.emit('updateItem',{id:item.id, value:newValue})
 }
 
 }
