@@ -9,7 +9,7 @@ const server = http.createServer(app)
 
 const socketIo= new Server(server, {
     cors:{
-        origin:"http://127.0.0.1:5000",
+        origin:"http://127.0.0.1:5500",
         methods:['GET','POST'],
     }
 });
