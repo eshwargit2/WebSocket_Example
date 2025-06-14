@@ -7,7 +7,13 @@ const addTodo = document.getElementById('addTodo');
 const todolist = document.getElementById('todolist');
 
 socket.on('update',(todoItems)=>{
-    console.log(todoItems);
+   
+    todolist.innerHTML='';
+    todoItems.forEach(item =>{
+        const li = document.createElement('li');
+        li.innerText=item.value;
+        todolist.appendChild(li)
+    })
     
 })
 
